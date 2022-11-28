@@ -1,0 +1,146 @@
+/* Font */
+/* @import url(../fonts/roboto/roboto.css);
+@import url(../fonts/work-sans/work-sans.css); */
+
+/* Variable */
+:root {
+  --clr-body: hsla(218, 89%, 15%, 0.75);
+  --clr-brand: #041d47;
+
+  --ff-body: "Roboto", sans-serif;
+  /* --ff-heading: "Work Sans", sans-serif; */
+
+  --radius: 0.25rem;
+  --transition: 0.5s all ease;
+  --shadow-s: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  --shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  --shadow-l: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+/* Reset */
+body {
+  font-family: var(--ff-body);
+  color: var(--clr-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* font-family: var(--ff-heading); */
+  color: var(--clr-brand);
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+}
+
+/* Utility */
+.sectionPadding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* Hero */
+#hero {
+  background: url(../images/hero-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Feature */
+#feature {
+  background: url(../images/feature-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.feature__card {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.feature__card:hover {
+  box-shadow: var(--shadow-l);
+}
+
+.feature__media {
+  margin-bottom: 1rem;
+}
+
+/* Review */
+#review {
+  background-color: white;
+}
+
+.review__card {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+  background-color: white;
+}
+
+.review__card:hover {
+  box-shadow: var(--shadow-l);
+}
+
+.review__person {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.review__media {
+  height: 3.5rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  box-shadow: var(--shadow-s);
+}
+
+.review__media img {
+  border-radius: 50%;
+}
+
+/* Footer */
+.social__list {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social__list i {
+  background-color: white;
+  color: var(--clr-brand);
+  cursor: pointer;
+  height: 3rem;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.social__list i:hover {
+  background-color: var(--clr-brand);
+  color: white;
+}
